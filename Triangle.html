@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>方向不同的三角形</title>
+    <!-- <link rel="stylesheet" href="css/Triangle.css" /> -->
+    <!-- /*
+    三角形，width和height都是0，
+    borderStyle都是solid
+    如果是向上的三角，那么上borderWidth是0， 下borderColor是有色的。
+    外层的div，position是relative，内层的span，position是absolute，display是block。相对外层的top和left要设置好
+    borderWidth
+    borderColor
+    上 右 下 左
+    top right bottom left
+    top right/left bottom
+    top/bottom right/left
+    all
+    margin的方向也是和border一样
+    box-shadow的方向 水平正右负左 竖直正下负上
+    /*向上*/ -->
+    <style>
+    .triangle_border_nw{
+        width:0;
+        height:0;
+        border-width:30px 30px 0 0;
+        border-style:solid;
+        border-color:#6c6 transparent transparent transparent;
+        margin:40px auto;
+        position:relative;
+    }
+    .triangle_border_nw_another{
+        width:0;
+        height:0;
+        border-width:0 0 30px 30px;
+        border-style:solid;
+        border-color:transparent transparent transparent #6c6;
+        margin:40px auto;
+        position:relative;
+    }
+    .triangle_border_up{
+        width:0;
+        height:0;
+        border-width:0 30px 30px;
+        border-style:solid;
+        border-color:transparent transparent #333;/*透明 透明  灰*/
+        margin:40px auto;
+        position:relative;
+    }
+    .triangle_border_up span{
+        display:block;
+        width:0;
+        height:0;
+        border-width:0 28px 28px;
+        border-style:solid;
+        border-color:transparent transparent #fc0;/*透明 透明  黄*/
+        position:absolute;
+        top:1px;
+        left:-28px;
+    }
+    /*向下*/
+    .triangle_border_down{
+        width:0;
+        height:0;
+        border-width:30px 30px 0;
+        border-style:solid;
+        border-color:#333 transparent transparent;/*灰 透明 透明 */
+        margin:40px auto;
+        position:relative;
+    }
+    .triangle_border_down span{
+        display:block;
+        width:0;
+        height:0;
+        border-width:28px 28px 0;
+        border-style:solid;
+        border-color:#fc0 transparent transparent;/*黄 透明 透明 */
+        position:absolute;
+        top:-29px;
+        left:-28px;
+    }
+    /*向左*/
+    .triangle_border_left{
+        width:0;
+        height:0;
+        border-width:30px 30px 30px 0;
+        border-style:solid;
+        border-color:transparent #333 transparent transparent;/*透明 灰 透明 透明 */
+        margin:40px auto;
+        position:relative;
+    }
+    .triangle_border_left span{
+        display:block;
+        width:0;
+        height:0;
+        border-width:28px 28px 28px 0;
+        border-style:solid;
+        border-color:transparent #fc0 transparent transparent;/*透明 黄 透明 透明 */
+        position:absolute;
+        top:-28px;
+        left:1px;
+    }
+    /*向右*/
+    .triangle_border_right{
+        width:0;
+        height:0;
+        border-width:30px 0 30px 30px;
+        border-style:solid;
+        border-color:transparent transparent transparent #333;/*透明 透明 透明 灰*/
+        margin:40px auto;
+        position:relative;
+    }
+    .triangle_border_right span{
+        display:block;
+        width:0;
+        height:0;
+        border-width:28px 0 28px 28px;
+        border-style:solid;
+        border-color:transparent transparent transparent #fc0;/*透明 透明 透明 黄*/
+        position:absolute;
+        top:-28px;
+        left:-29px;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- 向上的三角形 -->
+    <div class="triangle_border_up">
+      <span></span>
+    </div>
+
+    <!-- 向下的三角形 -->
+    <div class="triangle_border_down">
+        <span></span>
+    </div>
+
+    <!-- 向左的三角形 -->
+    <div class="triangle_border_left">
+        <span></span>
+    </div>
+
+    <!-- 向右的三角形 -->
+    <div class="triangle_border_right">
+        <span></span>
+    </div>
+
+    <div class="triangle_border_nw">
+
+    </div>
+
+    <div class="triangle_border_nw_another">
+
+    </div>
+  </body>
+</html>
