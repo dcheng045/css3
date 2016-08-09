@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+    <style>
+      .horizontalCenterMarginParent {
+        margin: 0 auto;
+        width: 200px; /* 最容易想到给父元素用margin:auto，margin:0 auto；效果是一样的。这种必须不能忘记的一点是，
+        要给父元素设置width，不然水平居中就不生效。
+        */
+      }
+
+			.verticalCenterLineHeight {
+					height: 100px;
+					line-height: 100px;/*值等于元素高度的值, 只对单行元素有效，如果多行，效果奇差无比，所以一般适用于给局部元素，
+          比如一个button，图片，或者单行文本居中。*/
+
+				}
+    </style>
+	</head>
+	<body>
+		<div class='horizontalCenterMarginParent'>
+      <span>I want be center, margin: auto, and margin:0 auto, same effect, but width must be set.</span>
+    </div>
+
+		<div class="verticalCenterLineHeight">
+			<span style='background-color: red'>I want be center, margin: auto, and margin:0 auto, same effect, but width must be set.I want be center, margin: auto, and margin:0 auto, same effect, but width must be set.I want be center, margin: auto, and margin:0 auto, same effect, but width must be set.I want be center, margin: auto, and margin:0 auto, same effect, but width must be set.I want be center, margin: auto, and margin:0 auto, same effect, but width must be set.</span>
+		</div>
+	</body>
+</html>
